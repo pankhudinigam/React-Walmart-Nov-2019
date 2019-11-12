@@ -5,6 +5,7 @@ import './App.css';
 import Hello from './components/Hello';
 import Counter from './components/Counter';
 import ListCustomer from './components/ListCustomers';
+import Search from './components/Search';
 
 
 function App() {
@@ -31,10 +32,11 @@ function App() {
           <p>This is some inner content</p>
         </Hello> */}
 
-        {/* <Counter title="Time"/>
-        <Counter title="Watch"/> */}
+        {/* <Counter/> */}
+        <Counter title="Watch"/>
 
-        <ListCustomer/>
+        {/* <ListCustomer/> */}
+        {/* <Search/> */}
       </section>
     </div>
   );

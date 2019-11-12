@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import SimpleHOC from '../hoc/SimpleHOC';
 //bind
 // arrow functions(ES6)
 
@@ -86,4 +86,5 @@ class Counter extends Component{
     }
 }
 
-export default Counter;
+
+export default SimpleHOC(Counter);
