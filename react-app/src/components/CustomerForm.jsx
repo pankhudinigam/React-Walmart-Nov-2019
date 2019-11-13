@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import { Customer } from '../model/Customer';
+import {withRouter} from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 
 class CustomerForm extends Component{
 
@@ -9,7 +12,7 @@ class CustomerForm extends Component{
 
     constructor(props){
         super(props);
-        console.log("CustomerForm constructor")
+        console.log("CustomerForm constructor:", this.props);
 
         this.initState = {...this.state};
         if(this.props.customer){
@@ -90,4 +93,14 @@ class CustomerForm extends Component{
     }
 }
 
-export default CustomerForm;
+CustomerForm.propTypes = {
+
+    onSave: PropTypes.func.isRequired,
+    onCancel: PropTypes.func.isRequired,
+    title: PropTypes.string
+
+}
+
+
+
+export default withRouter(CustomerForm);

@@ -14,6 +14,7 @@ const Search = () => {
     const [text, setText] = useState('');
     const [results, setResults] = useState([]);
 
+    
     function change(evt){
         setText(evt.target.value);
     }

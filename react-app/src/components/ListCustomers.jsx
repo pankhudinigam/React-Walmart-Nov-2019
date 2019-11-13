@@ -3,6 +3,7 @@ import { Customer } from '../model/Customer';
 import './ListCustomers.css';
 import CustomerForm from './CustomerForm';
 import Axios from 'axios';
+import {Link} from 'react-router-dom';
 
 class ListCustomer extends PureComponent {
 
@@ -16,14 +17,14 @@ class ListCustomer extends PureComponent {
     constructor(props) {
         super(props);
 
-
+        
         this.url = process.env.REACT_APP_CUSTOMERS_URL;
         console.log(this.url);
         // this.state.data.push(new Customer(1, "Google", "Bangalore"));
         // this.state.data.push(new Customer(2, "Facebook", "Bangalore"));
         // this.state.data.push(new Customer(3, "Reliance", "Mumbai"));
         // this.state.data.push(new Customer(4, "Infosys", "Bangalore"));
-        console.log("[ListCustomer constructor]")
+        console.log("[ListCustomer constructor]: ", this.props);
     }
 
 
@@ -138,6 +139,9 @@ class ListCustomer extends PureComponent {
 
     }
 
+    // nav = (id) =>{
+    //     window.localStorage.setItem("custID", id);
+    // }
     renderCustomers = () => {
         return this.state.data.map((item, index) => {
             return (
@@ -151,6 +155,9 @@ class ListCustomer extends PureComponent {
                         <a href="#" onClick={(evt) => { this.delete(index, evt) }}>Delete</a>
                         &nbsp;
                         <a href="#" onClick={(evt) => { this.edit(index, evt) }}>Edit</a>
+                        &nbsp;
+                        <Link to={"customers" + "/" + item.id}>Details</Link>
+                        {/* <Link to={"customersDetails"} onClick={()=> {this.nav(item.id)}}>Details</Link> */}
                     </div>
                 </div>
             );
