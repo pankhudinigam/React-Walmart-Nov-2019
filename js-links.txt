@@ -1,0 +1,8 @@
+https://github.com/dwyl/Javascript-the-Good-Parts-notes
+https://jstherightway.org/
+
+
+https://tylermcginnis.com/blog
+
+https://tylermcginnis.com/ultimate-guide-to-execution-contexts-hoisting-scopes-and-closures-in-javascript/
+https://tylermcginnis.com/this-keyword-call-apply-bind-javascript/

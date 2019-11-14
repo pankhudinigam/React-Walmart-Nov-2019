@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import SimpleHOC from '../hoc/SimpleHOC';
 //bind
 // arrow functions(ES6)
 
@@ -67,7 +67,7 @@ class Counter extends Component{
                 <h4>Counter =>  {this.props.title}</h4>
                 <p>Count: {this.state.count}</p>
                 <div>
-                    <button onClick={this.inc}>Increment</button>&nbsp; &nbsp;
+                    <button id="incBtn" onClick={this.inc}>Increment</button>&nbsp; &nbsp;
                     <button onClick={this.decr}>Decrement</button>
                 </div>
                 <div>
@@ -86,4 +86,6 @@ class Counter extends Component{
     }
 }
 
+
+//export default SimpleHOC(Counter);
 export default Counter;

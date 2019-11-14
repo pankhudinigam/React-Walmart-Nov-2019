@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter Test suite snapshot 1`] = `
+<div>
+  <h4>
+    Counter =&gt;  
+    Counter
+  </h4>
+  <p>
+    Count: 
+    5
+  </p>
+  <div>
+    <button
+      id="incBtn"
+      onClick={[Function]}
+    >
+      Increment
+    </button>
+       
+    <button
+      onClick={[Function]}
+    >
+      Decrement
+    </button>
+  </div>
+  <div>
+    Count: 
+    <input
+      onChange={[Function]}
+      type="number"
+      value={5}
+    />
+  </div>
+  <div>
+    Value: 
+    <input
+      type="number"
+    />
+      
+    <button
+      onClick={[Function]}
+    >
+      Update
+    </button>
+  </div>
+</div>
+`;
